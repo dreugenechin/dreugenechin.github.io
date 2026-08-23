@@ -1,10 +1,16 @@
 /* GLOBAL VARIABLES & RESET */
 :root {
-  --bg-main: #ffffff;
-  --bg-light: #f9fafb;
-  --text-main: #111827;
-  --text-muted: #6b7280;
-  --accent: #2563eb;
+  --bg-main: #111827; /* Dark matte gray body background */
+  --bg-section-accent: #1f2937; /* Slightly darker gray for accent sections */
+  --bg-nav: #ffffff; /* White high-contrast nav bar */
+  --bg-card: #ffffff; /* White card background for Roles/Services */
+  --bg-pill: #ffffff; /* White background for teaching pills */
+  --bg-contact-block: #f9fafb; /* Solid light block for contact */
+  --text-main: #f9fafb; /* Light text for main body and dark sections */
+  --text-dark: #111827; /* Dark text for light elements (nav, cards, contact) */
+  --text-muted-light: #9ca3af; /* Muted text on dark background */
+  --text-muted-dark: #6b7280; /* Muted text on light background */
+  --accent: #2563eb; /* Blue accent color for links */
   --border-radius: 12px;
   --font-family: 'Inter', sans-serif;
 }
@@ -42,8 +48,8 @@ section {
   padding: 80px 0;
 }
 
-.bg-light {
-  background-color: var(--bg-light);
+.bg-darker {
+  background-color: var(--bg-section-accent);
 }
 
 .section-title {
@@ -53,13 +59,12 @@ section {
   letter-spacing: -0.02em;
 }
 
-/* NAVIGATION */
+/* NAVIGATION (Light Bar on Dark Background) */
 header {
+  background-color: var(--bg-nav);
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
   z-index: 100;
 }
 
@@ -68,6 +73,11 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  color: var(--text-dark);
+}
+
+.navbar .left-side b {
+  color: var(--text-dark);
 }
 
 .right-side {
@@ -77,13 +87,13 @@ header {
 }
 
 .right-side a {
-  color: var(--text-muted);
+  color: var(--text-muted-dark);
   font-weight: 500;
   font-size: 0.9rem;
 }
 
 .right-side a:hover {
-  color: var(--text-main);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
@@ -96,7 +106,7 @@ header {
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* HERO SECTION */
+/* HERO SECTION (Text is Light on Dark) */
 .hero-section {
   padding: 100px 0;
 }
@@ -109,7 +119,7 @@ header {
   width: 100%;
   max-width: 450px;
   border-radius: var(--border-radius);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3); /* Subtle darker shadow for dark mode */
   display: block;
 }
 
@@ -117,12 +127,13 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 5px;
+  color: var(--text-main);
 }
 
 .tagline {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--text-muted-light);
   letter-spacing: 0.05em;
   margin-bottom: 20px;
 }
@@ -133,6 +144,7 @@ header {
   font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: -0.03em;
+  color: var(--text-main);
 }
 
 .hero-buttons {
@@ -149,21 +161,22 @@ header {
 }
 
 .btn-primary {
-  background-color: var(--text-main);
-  color: #fff;
+  background-color: var(--bg-nav); /* Solid light-colored button */
+  color: var(--text-dark);
 }
-.btn-primary:hover { background-color: #374151; }
+.btn-primary:hover { background-color: #d1d5db; }
 
-.btn-secondary {
+.btn-ghost {
   background-color: transparent;
   border: 1px solid #d1d5db;
   color: var(--text-main);
 }
-.btn-secondary:hover { background-color: var(--bg-light); }
+.btn-ghost:hover { background-color: rgba(255, 255, 255, 0.05); }
 
-/* CARDS (Roles, Research, Services) */
+/* HIGH-CONTRAST WHITE CARDS (Roles, Services, Teaching) */
 .card {
-  background: #fff;
+  background: var(--bg-card);
+  color: var(--text-dark);
   border: 1px solid #e5e7eb;
   padding: 30px;
   border-radius: var(--border-radius);
@@ -173,11 +186,17 @@ header {
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
+  color: var(--text-dark);
 }
 
-.text-muted {
-  color: var(--text-muted);
+.text-muted-dark {
+  color: var(--text-muted-dark);
 }
+.card p.small { color: var(--text-muted-dark); }
+
+/* RESEARCH AREAS (Dark background with light text) */
+.research-list h3 { color: var(--text-main); }
+.research-list p { color: var(--text-main); }
 
 /* PUBLICATIONS TIMELINE */
 .pub-header {
@@ -207,15 +226,18 @@ header {
   border-bottom: none;
 }
 
-.year {
+.timeline-item .year {
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--text-muted-light);
   min-width: 60px;
 }
+.publication-content b { color: var(--text-main); }
+.publication-content { color: var(--text-main); }
 
-/* TEACHING PILLS */
+/* TEACHING PILLS (White on dark) */
 .course-pill {
-  background: var(--bg-light);
+  background: var(--bg-pill);
+  color: var(--text-dark);
   border: 1px solid #e5e7eb;
   padding: 15px;
   border-radius: 8px;
@@ -224,27 +246,34 @@ header {
   font-size: 0.95rem;
 }
 
-/* CONTACT SECTION */
-.contact-box {
-  background: var(--text-main);
-  color: #fff;
-  padding: 50px;
-  border-radius: var(--border-radius);
+/* CONTACT SECTION (Solid light box on dark) */
+.contact-section {
+  padding: 80px 0;
 }
 
-.contact-box h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.contact-block {
+  background-color: var(--bg-contact-block);
+  color: var(--text-dark);
+  padding: 50px;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
 }
-.contact-box a { color: #93c5fd; }
-.mt-2 { margin-top: 20px; }
+
+.contact-header { margin-bottom: 20px; }
+.contact-header h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--text-dark); }
+.contact-header p { color: var(--text-dark); }
+
+.contact-details p { color: var(--text-dark); }
+.contact-details a { color: var(--accent); }
 
 /* FOOTER */
 footer {
   padding: 40px 0;
   border-top: 1px solid #e5e7eb;
-  color: var(--text-muted);
+  color: var(--text-muted-light);
   font-size: 0.9rem;
+  background-color: var(--bg-section-accent);
 }
 
 .footer-flex {
@@ -268,4 +297,5 @@ footer {
   .timeline-item { flex-direction: column; gap: 5px; }
   .hero-headline { font-size: 2.2rem; }
   .footer-flex { flex-direction: column; gap: 15px; text-align: center; }
+  .contact-block { padding: 30px; }
 }
