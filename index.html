@@ -4,158 +4,190 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Dr. Chin, Dr. Eu Gene Chin, Eu Gene Chin">
-  <meta property="og:image" content="assets/ChinPhoto.jpg">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr. Eu Gene Chin — Personal Site</title>
   <meta name="description" content="Access to care researcher, psychometrics methodologist, and licensed psychologist. Methodologist/statistician for extramurally funded projects; co‑leads the Culture and Mental Health Lab and the Asian American Specialty Mental Health Initiative." />
+  <title>Dr. Eu Gene Chin — Personal Site</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  
+  <!-- Modern Font (Inter) for the Lovable look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-        <div>
-          <nav class="navbar">
-            <ul class="left-side"><b>Dr. Eu Gene Chin</b></ul>
-            <ul class="right-side">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#research">Research</a></li>
-              <li><a href="#publications">Publications</a></li>
-              <li><a href="#teaching">Teaching</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            </div>
-          </nav>
-        </div>
+    <nav class="navbar container">
+      <div class="left-side"><b>Dr. Eu Gene Chin</b></div>
+      <ul class="right-side">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="home">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="img">
-          <img src="assets/ChinPhoto.jpg" alt="Dr.Chin">
-        </div>
-        <div>
-          <h2>Dr. Eu Gene Chin, Ph.D.</h2>
-          <div class="tagline">Associate Professor | Associate Editor, Journal of Psychology & Theology</div>
-          <p>I'm an <b>Associate Professor</b> at <a href="https://www.biola.edu/rosemead">Rosemead School of Psychology, Biola University
-          </a> and <b>Associate Editor</b> for the <a href="https://journals.sagepub.com/home/ptj" target="_blank" rel="noopener">Journal of Psychology and Theology</a>. 
-            I research access to care for heterogenous populations, religious/spiritual factors that contribute to well-being, 
-            as well as the creation and testing of psychological measures. 
-            I serve as the methodologist/statistician for many research projects and co-lead the <a href="https://aamhi-biola.github.io/aamhi-connect/" target="_blank" rel="noopener">Asian American Mental Health Initiative</a> and <a href="https://culturementalhealthlab-rosemead.github.io/cmhlab-rosemead/" target="_blank" rel="noopener">Culture and Mental Health Lab</a>. 
-          </p>
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="grid grid-2 hero-grid">
+          <div class="hero-img-container">
+            <img src="assets/ChinPhoto.jpg" alt="Dr. Eu Gene Chin">
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-name">Dr. Eu Gene Chin</h1>
+            <div class="tagline">ASSOCIATE PROFESSOR | CLINICAL PSYCHOLOGIST</div>
+            <h2 class="hero-headline">Bridging psychological science and human flourishing.</h2>
+            <p>I'm an Associate Professor at the Rosemead School of Psychology, Biola University, and Associate Editor for the Journal of Psychology and Theology. I research access to care for heterogeneous populations, religious and spiritual factors that contribute to well-being, and the creation and testing of psychological measures.</p>
+            <div class="hero-buttons">
+              <a href="assets/EC-VITA (04-22-2026).pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+              <a href="https://culturementalhealthlab-rosemead.github.io/cmhlab-rosemead/" class="btn btn-secondary" target="_blank" rel="noopener">CMH Lab</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ROLES SECTION -->
+    <section id="roles" class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Professional Roles</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Associate Professor of Psychology</h3>
+            <p class="small text-muted">Rosemead School of Psychology, Biola University</p>
+          </div>
+          <div class="card">
+            <h3>Associate Editor, JPT</h3>
+            <p class="small text-muted">Associate Editor of Journal of Psychology & Theology</p>
+          </div>
+          <div class="card">
+            <h3>Co-Director</h3>
+            <p class="small text-muted">Culture and Mental Health Lab & Asian American Mental Health Initiative</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH SECTION -->
+    <section id="research">
+      <div class="container">
+        <h2 class="section-title">Research Areas</h2>
+        <div class="grid grid-3">
+          <div class="card research">
+            <h3>Access to Care</h3>
+            <p class="small">I examine access to care for heterogeneous populations, building and testing conceptual models that explain treatment initiation and engagement outcomes. I use quantitative and mixed-methods research designs.</p>
+          </div>
+          <div class="card research">
+            <h3>Measurement Development</h3>
+            <p class="small">I help researchers build and test psychological measures based on reflective, formative, or composite measurement models. I use structural equation modeling to answer research questions.</p>
+          </div>
+          <div class="card research">
+            <h3>Well-Being & Flourishing</h3>
+            <p class="small">I examine psychological and religious/spiritual factors that contribute to well-being, burnout, and/or flourishing. I use general linear models and path analytic frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="bg-light">
+      <div class="container">
+        <div class="pub-header">
+          <h2 class="section-title">Selected Publications</h2>
+          <a href="#" class="btn-text">FULL PUBLICATION LIST &rarr;</a>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="year">2025</div>
+            <div class="publication-content"><b>Kwong, P., Dwiwardani, C., Kim, G. Y., Chin, E., Chang, N., & Cho, L. (2025).</b> Mixed Methods Needs Assessment of Mental Health among Asian American Christians: A Pilot Study. <i>Journal of Psychology & Theology</i>, 53(2), 157-175.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2025</div>
+            <div class="publication-content"><b>Harris, J., Solomon, E., Baldwin, K., Baker, L., Chin, E., Dubois, J. (2025).</b> Integrating mRNA Vaccines into the Attitudes Toward Genomics and Precision Medicine Scale: A Validation Study with 4,939 US Adults. <i>Journal of Clinical and Translational Science</i>, 9(60), 1-7.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2024</div>
+            <div class="publication-content"><b>Brown, E. M., Chin, E., Wang, D. C., Lewis, B., Fort, C., Captari, L. E., Crabtree, S. A., & Sandage S. J. (2024).</b> Adverse Childhood Experiences, Religious Coping, and Congregational Support among Black Clergy and Religious Leaders. <i>Religions</i>, 15(4), 396.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2017</div>
+            <div class="publication-content"><b>Johnson, L. R., Chin, E., Kajumba, M., Buchanan, E., Kizito, S., & Bangirana, P. (2017).</b> Do Concepts of Depression Predict Treatment Pathways? A Closer Look at Explanatory Models Among Clinical and Nonclinical Samples in Uganda. <i>Journal of Clinical Psychology</i>, 73(7), 893–909.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING SECTION -->
+    <section id="teaching">
+      <div class="container">
+        <h2 class="section-title">Courses I Teach</h2>
+        <div class="grid grid-4">
+          <div class="course-pill">Structural Equation Modeling</div>
+          <div class="course-pill">Research Design</div>
+          <div class="course-pill">Program Evaluation</div>
+          <div class="course-pill">Measurement & Assessment</div>
+          <div class="course-pill">Trauma & PTSD</div>
+          <div class="course-pill">Dialectical Behavior Therapy</div>
+          <div class="course-pill">Cognitive Behavior Therapy</div>
+          <div class="course-pill">Psychopathology</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Professional Services</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Research Consultation</h3>
+            <p class="small">Design and methodology, data management and diagnostics, and statistical analysis and modeling using R, Mplus, G*Power, SAS, and SPSS.</p>
+          </div>
+          <div class="card">
+            <h3>Program Evaluation</h3>
+            <p class="small">Culturally responsive evaluation services, improving interventions, giving voice to heterogeneous groups, and testing theories in real-world settings.</p>
+          </div>
+          <div class="card">
+            <h3>Clinical Services</h3>
+            <p class="small">Credentialed health service (56751) and licensed psychologist (PSY35267) specializing in stress, trauma, anxiety, depression, addiction, and cultural issues.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Let's collaborate.</h2>
+          <p>Reach out about research, teaching, consultation, or clinical services.</p>
+          <div class="contact-details mt-2">
+            <p><strong>Email:</strong> <a href="mailto:eu.gene.chin@biola.edu">eu.gene.chin@biola.edu</a></p>
+            <p><strong>Phone:</strong> (562) 903-4867</p>
+            <p><strong>Location:</strong> La Mirada, CA 90639</p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/eu-gene-chin-982b1742" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section id="research">
-    <div class="container">
-      <h2>Research Areas</h2>
-      <div class="horizontal-divider"></div>
-      <div class="grid grid-3">
-        <div class="card research">
-          <p><img src="assets/bar-graph.png" alt="bar-graph"></img><h3>Access to Care</h3></p>
-          <p class="small">I examine access to care for heterogeneous populations, 
-            building and testing conceptual models that explain treatment initiation and engagement outcomes, 
-            I use quantitative and mixed-methods research designs to answer research questions related to access to care.</p>
-        </div>
-        <div class="card research">
-          <p><img src="assets/line-graph.png" alt="line-graph"></img><h3>Measurement Development</h3></p>
-          <p class="small">I help researchers build and test psychological measures based on reflective, formative, or composite measurement models. 
-          I use structural equation modeling to answer research questions related to measurement development.</p>
-        </div>
-        <div class="card research">
-          <p><img src="assets/linear graph.png" alt="linear graph"></img><h3>Well-Being/Flourishing</h3></p>
-          <p class="small">I examine psychological and religious/spiritual factors that contribute to well-being, burnout, and/or flourishing. I use general linear models and path analytic frameworks to answer these types of questions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="container">
-      <h2>Selected Publications</h2>
-      <div class="horizontal-divider"></div>
-      <div class="grid grid-4ver">
-        <div class="row-card"><b>Kwong, P., Dwiwardani, C., Kim, G. Y., Chin, E., Chang, N., & Cho, L. (2025). </b>Mixed Methods Needs Assessment of Mental Health among Asian American Christians: A Pilot Study. Journal of Psychology & Theology, 53(2), 157-175. https://doi.org/10.1177/00916471251343396</div>
-        <div class="row-card"><b>Brown, E. M., Chin, E., Wang, D. C., Lewis, B., Fort, C., Captari, L. E., Crabtree, S. A., & Sandage S. J. (2024). </b>Adverse childhood experiences, religious coping, and congregational support among black clergy and religious leaders. Religions, 15(4), 396. https://doi.org/10.3390/rel15040396</div>
-        <div class="row-card"><b>Harris, J., Solomon, E., Baldwin, K., Baker, L., Chin, E., Dubois, J. (2025). </b>Integrating mRNA Vaccines into the Attitudes Toward Genomics and Precision Medicine Scale: A Validation Study with a Sample of 4,939 Adults in the US. Journal of Clinical and Translational Science, 9(60), 1-7. https://doi.org/10.1017/cts.2025.38</div>
-        <div class="row-card"><b>Johnson, L. R., Chin, E., Kajumba, M., Buchanan, E., Kizito, S., & Bangirana, P. (2017). </b>Do Concepts of Depression Predict Treatment Pathways? A Closer Look at Explanatory Models Among Clinical and Nonclinical Samples in Uganda. Journal of Clinical Psychology, 73(7), 893 – 909. http://dx.doi.org/10.1002/jclp.22378</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="teaching">
-    <div class="container">
-      <h2>Teaching</h2>
-      <div class="horizontal-divider"></div>
-        <div class="grid-container">
-          <div class="grid-item">Structural Equation Modeling</div>
-          <div class="grid-item">Research Design</div>
-          <div class="grid-item">Program Evaluation</div>
-          <div class="grid-item">Measurement & Assessment</div>
-          <div class="grid-item">Trauma & PTSD</div>
-          <div class="grid-item">Dialectical Behavior Therapy</div>
-          <div class="grid-item">Cognitive Behavior Therapy</div>
-          <div class="grid-item">Psychopathology</div>
-        </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <h2>Professional Services</h2>
-      <div class="horizontal-divider"></div>
-      <div class="grid grid-3">
-        <div class="card services">
-          <img src="assets/microscope.png" alt="microscope"></img><h3>Research Consultation</h3>
-          <p>Design and methodology, data management and diagnostics, and statistical analysis and modeling using R, Mplus, G*Power, SAS, and SPSS.</p>
-        </div>
-        <div class="card services">
-          <img src="assets/clipboard.png" alt="clipboard"></img><h3>Program Evaluation</h3>
-          <p>Culturally responsive evaluation services, improving interventions, giving voice to heterogeneous groups, and testing theories in real-world settings.</p>
-        </div>
-        <div class="card services">
-          <img src="assets/brain.png" alt="brain"></img><h3>Clinical Services</h3>
-          <p>Credentialed health service (56751) and licensed psychologist (PSY35267) specializing in stress, trauma, anxiety, depression, addiction, and cultural issues.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <div class="horizontal-divider"></div>
-      <div class="grid contact">
-        <div class="card">
-          <p><img src="assets/email.png" alt="email"></img><b>  Email: </b><a href="eu.gene.chin@biola.edu" target="_blank" rel="noopener">Eu Gene Chin</a></p>
-          <p><img src="assets/institution.png" alt="institution"></img><b>    Institution: </b><a href="https://www.biola.edu/rosemead" target="_blank" rel="noopener">Rosemead School of Psychology, Biola University</a></p>
-          <p><img src="assets/location.png" alt="location"></img><b>  Location: </b>La Mirada, CA 90639</p>
-          <p><img src="assets/link.png" alt="link"></img><b>   LinkedIn: </b><a href="https://www.linkedin.com/in/eu-gene-chin-982b1742" target="_blank" rel="noopener">Connect on LinkedIn</a></p>
-          <p>Thanks for visiting! Feel free to reach out if you would like to connect or have any questions about my research, teaching, or services.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <div class="container">
-      <div>
-        <ul class="footer-notes">
-          <li><a href="https://www.biola.edu/directory/people/eu-gene-chin" target="_blank" rel="noopener">Biola Directory</a></li>
-          <li><a href="assets/EC-VITA (04-22-2026).pdf" target="_blank" rel="noopener">Download CV</a></li>
-          <li><a href="https://culturementalhealthlab-rosemead.github.io/cmhlab-rosemead/" target="_blank" rel="noopener">Culture & Mental Health Lab</a></li>
-        </ul>
-      </div>
+    <div class="container footer-flex">
       <div>&copy; <span id="year"></span> Dr. Eu‑Gene Chin. All rights reserved.</div>
+      <ul class="footer-notes">
+        <li><a href="https://www.biola.edu/directory/people/eu-gene-chin" target="_blank">Biola Directory</a></li>
+        <li><a href="https://culturementalhealthlab-rosemead.github.io/cmhlab-rosemead/" target="_blank">Culture & Mental Health Lab</a></li>
+      </ul>
     </div>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
