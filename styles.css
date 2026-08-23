@@ -1,16 +1,16 @@
-/* GLOBAL VARIABLES & RESET */
+/* GLOBAL VARIABLES & RESET - DARK BROWN THEME */
 :root {
-  --bg-main: #0a0a0a; /* True deep black/gray */
-  --bg-section-accent: #121212; /* Very subtle section distinction */
-  --bg-card: #18181b; /* Charcoal for cards and blocks */
-  --text-main: #d4d4d8; /* Soft light gray for reading */
-  --text-heading: #f8fafc; /* Crisp off-white for titles */
-  --text-muted: #a1a1aa;
-  --border-color: #27272a; /* Faint gray borders */
-  --accent: #60a5fa; /* Lighter blue to pop on dark backgrounds */
+  --bg-main: #1c1917; /* Very dark espresso/stone */
+  --bg-section-accent: #292524; /* Slightly lighter brown-gray for sections */
+  --bg-card: #292524; /* Card background matching section accent */
+  --text-main: #d6d3d1; /* Warm off-white for reading */
+  --text-heading: #fafaf9; /* Bright warm white for titles */
+  --text-muted: #a8a29e;
+  --border-color: #44403c; /* Visible warm gray border */
+  --accent: #d97706; /* Amber/Bronze accent color for links */
   --border-radius: 12px;
   --font-body: 'Inter', sans-serif;
-  --font-heading: 'Playfair Display', serif; /* Classy serif */
+  --font-heading: 'Playfair Display', serif; 
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -42,9 +42,11 @@ header {
   position: sticky; top: 0; z-index: 100;
 }
 .navbar { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-.left-side b { font-size: 1.2rem; }
+
+/* Adjusted Nav Font Sizes per Request */
+.left-side b { font-size: 0.75rem; } 
 .right-side { list-style: none; display: flex; gap: 20px; }
-.right-side a { color: var(--text-muted); font-size: 0.9rem; font-family: var(--font-body); }
+.right-side a { color: var(--text-muted); font-size: 0.95rem; font-family: var(--font-body); }
 .right-side a:hover { color: var(--text-heading); }
 
 /* GRIDS */
@@ -61,18 +63,18 @@ header {
   box-shadow: 0 10px 30px rgba(0,0,0,0.8);
   display: block;
 }
-.hero-name { font-size: 1.8rem; margin-bottom: 5px; }
 .tagline { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 20px; }
 .hero-headline { font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
-.hero-buttons { margin-top: 30px; display: flex; gap: 15px; }
+/* Added flex-wrap so the 4 buttons don't overflow on small screens */
+.hero-buttons { margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; }
 
 .btn { padding: 12px 24px; border-radius: 6px; font-weight: 500; text-decoration: none !important; font-family: var(--font-body); }
 .btn-primary { background-color: var(--text-heading); color: var(--bg-main); }
-.btn-primary:hover { background-color: #cbd5e1; }
+.btn-primary:hover { background-color: #e5e5e5; }
 .btn-ghost { border: 1px solid var(--border-color); color: var(--text-main); }
 .btn-ghost:hover { background-color: var(--bg-card); }
 
-/* DARK CARDS */
+/* CARDS & PILLS */
 .card, .course-pill, .contact-block {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -88,6 +90,10 @@ header {
 .timeline-item:last-child { border-bottom: none; }
 .timeline-item .year { font-weight: 700; color: var(--text-muted); min-width: 60px; font-family: var(--font-body); }
 .publication-content b { color: var(--text-heading); }
+
+/* CONTACT */
+.contact-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.contact-block { background: var(--bg-card); display: flex; flex-direction: column; }
 
 /* FOOTER */
 footer { padding: 40px 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
