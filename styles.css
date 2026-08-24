@@ -9,8 +9,10 @@
   --border-color: #44403c; /* Visible warm gray border */
   --accent: #d97706; /* Amber/Bronze accent color for links */
   --border-radius: 12px;
---font-body: 'Inter', sans-serif;
-  --font-heading: 'Cormorant Condensed', serif; /* Ultra-narrow, classy scholarly serif */
+:root {
+  /* ... keep your color variables intact ... */
+  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Cormorant Garamond', serif; /* Classic, refined serif */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,16 +26,16 @@ body {
 
 /* Apply classy narrow serif only to major titles */
 /* Apply narrow, elegant Cinzel font to major titles */
-/* Major titles using Cormorant Condensed */
+/* Major titles using Cormorant Garamond */
 h1, h2, .hero-name, .left-side b {
   font-family: var(--font-heading);
   color: var(--text-heading);
-  font-weight: 600; /* Medium-bold for crisp readability while remaining very narrow */
-  letter-spacing: 0.02em;
+  font-weight: 600; /* Crisp, scholarly weight */
+  letter-spacing: 0.01em;
 }
 
 .section-title {
-  font-size: 2.8rem; /* Keeps section titles prominent without taking up excessive horizontal width */
+  font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
