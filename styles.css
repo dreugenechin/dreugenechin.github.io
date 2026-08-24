@@ -2,15 +2,17 @@
 :root {
   --bg-main: #1c1917; /* Very dark espresso/stone */
   --bg-section-accent: #292524; /* Slightly lighter brown-gray for sections */
-  --bg-card: #292524; /* Card background matching section accent */
-  --text-main: #d6d3d1; /* Warm off-white for reading */
-  --text-heading: #fafaf9; /* Bright warm white for titles */
+  --bg-card: #292524; /* Card background */
+  
+  --text-main: #d6d3d1; /* Warm off-white for regular reading text */
+  --text-heading: #fafaf9; /* Bright warm white for major titles */
+  --text-subheader: #e7e5e4; /* Distinct off-white for subheaders */
   --text-muted: #a8a29e;
-  --border-color: #44403c; /* Visible warm gray border */
+  
+  --border-color: #44403c; /* Warm gray border */
   --accent: #d97706; /* Amber/Bronze accent color for links */
   --border-radius: 12px;
-:root {
-  /* ... keep your color variables intact ... */
+  
   --font-body: 'Inter', sans-serif;
   --font-heading: 'Cormorant Garamond', serif; /* Classic, refined serif */
 }
@@ -21,32 +23,30 @@ body {
   font-family: var(--font-body);
   color: var(--text-main);
   background-color: var(--bg-main);
-  line-height: 1.6;
+  font-size: 0.9rem; /* Reduced base font size from default 1rem */
+  line-height: 1.5; /* Slightly tighter line height for a cleaner profile */
 }
 
-/* Apply classy narrow serif only to major titles */
-/* Apply narrow, elegant Cinzel font to major titles */
-/* Major titles using Cormorant Garamond */
+/* Apply Cormorant Garamond to major titles */
 h1, h2, .hero-name, .left-side b {
   font-family: var(--font-heading);
   color: var(--text-heading);
-  font-weight: 600; /* Crisp, scholarly weight */
-  letter-spacing: 0.01em;
-}
-
-.section-title {
-  font-size: 2.6rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
 }
 
 a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
 a:hover { text-decoration: underline; }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-section { padding: 80px 0; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 24px; } /* Slightly narrower container for cleaner margins */
+section { padding: 60px 0; } /* Reduced section padding to create a tighter vertical flow */
 .bg-darker { background-color: var(--bg-section-accent); }
-.section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 2rem; }
+
+.section-title { 
+  font-size: 2.1rem; /* Scaled down from 2.6rem */
+  font-weight: 600; 
+  margin-bottom: 1.5rem; 
+}
 
 /* NAVIGATION */
 header {
@@ -54,77 +54,80 @@ header {
   border-bottom: 1px solid var(--border-color);
   position: sticky; top: 0; z-index: 100;
 }
-.navbar { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-
-/* Adjusted Nav Font Sizes per Request */
-.left-side b { font-size: 0.75rem; } 
-.right-side { list-style: none; display: flex; gap: 20px; }
-.right-side a { color: var(--text-muted); font-size: 0.95rem; font-family: var(--font-body); }
+.navbar { display: flex; justify-content: space-between; align-items: center; height: 60px; } /* Reduced height */
+.left-side b { font-size: 1.1rem; font-weight: 700; } 
+.right-side { list-style: none; display: flex; gap: 18px; }
+.right-side a { color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-body); font-weight: 500; }
 .right-side a:hover { color: var(--text-heading); }
 
 /* GRIDS */
-.grid { display: grid; gap: 30px; }
+.grid { display: grid; gap: 20px; } /* Reduced gap between cards */
 .grid-2 { grid-template-columns: 1fr 1fr; }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
 /* HERO SECTION */
+.hero-section { padding: 70px 0; }
 .hero-grid { align-items: center; }
 .hero-img-container img {
-  width: 100%; max-width: 450px;
+  width: 100%; max-width: 380px; /* Scaled image down slightly */
   border-radius: var(--border-radius);
   box-shadow: 0 10px 30px rgba(0,0,0,0.8);
   display: block;
 }
-.tagline { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 20px; }
-.hero-headline { font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
-/* Added flex-wrap so the 4 buttons don't overflow on small screens */
-.hero-buttons { margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; }
+.tagline { font-size: 0.75rem; font-weight: 600; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 15px; }
+.hero-headline { font-size: 2.6rem; line-height: 1.15; margin-bottom: 15px; } /* Scaled down from 3.5rem */
+.hero-buttons { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
 
-.btn { padding: 12px 24px; border-radius: 6px; font-weight: 500; text-decoration: none !important; font-family: var(--font-body); }
+.btn { padding: 10px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; text-decoration: none !important; font-family: var(--font-body); }
 .btn-primary { background-color: var(--text-heading); color: var(--bg-main); }
 .btn-primary:hover { background-color: #e5e5e5; }
 .btn-ghost { border: 1px solid var(--border-color); color: var(--text-main); }
 .btn-ghost:hover { background-color: var(--bg-card); }
 
-/* CARDS & PILLS */
+/* CARDS, PILLS & SUBHEADERS */
 .card, .course-pill, .contact-block {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 30px;
+  padding: 22px; /* Scaled down padding inside cards */
   border-radius: var(--border-radius);
 }
-.course-pill { padding: 15px; text-align: center; font-size: 0.95rem; }
-.card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.course-pill { padding: 12px; text-align: center; font-size: 0.85rem; }
+
+/* Subheaders */
+.card h3 { 
+  font-family: var(--font-body); 
+  font-size: 1rem; /* Scaled down subheaders */
+  font-weight: 600; 
+  color: var(--text-subheader); 
+  margin-bottom: 8px; 
+}
+
+.card p {
+  font-size: 0.85rem; /* Smaller text inside cards for high scannability */
+}
 
 /* TIMELINE */
 .pub-header { display: flex; justify-content: space-between; align-items: baseline; }
-.timeline-item { display: flex; gap: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+.timeline-item { display: flex; gap: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); font-size: 0.85rem; }
 .timeline-item:last-child { border-bottom: none; }
-.timeline-item .year { font-weight: 700; color: var(--text-muted); min-width: 60px; font-family: var(--font-body); }
-.publication-content b { color: var(--text-heading); }
+.timeline-item .year { font-weight: 700; color: var(--text-muted); min-width: 50px; font-family: var(--font-body); }
+.publication-content b { color: var(--text-subheader); }
+.btn-text { font-size: 0.8rem; }
 
 /* CONTACT */
-.contact-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.contact-header h2 { font-size: 2.2rem; margin-bottom: 8px; }
 .contact-block { background: var(--bg-card); display: flex; flex-direction: column; }
 
 /* FOOTER */
-footer { padding: 40px 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
+footer { padding: 30px 0; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.8rem; }
 .footer-flex { display: flex; justify-content: space-between; align-items: center; }
-.footer-notes { list-style: none; display: flex; gap: 20px; }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .hero-grid { flex-direction: column-reverse; }
-  .navbar { flex-direction: column; height: auto; padding: 15px 0; }
-  .timeline-item { flex-direction: column; gap: 5px; }
-}
+.footer-notes { list-style: none; display: flex; gap: 16px; }
 
 /* --- SCROLL REVEAL (LAZY LOADING) ANIMATIONS --- */
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
@@ -134,8 +137,15 @@ footer { padding: 40px 0; border-top: 1px solid var(--border-color); color: var(
   transform: translateY(0);
 }
 
-/* Optional: Stagger the cards so they load one after another */
 .grid > .fade-in:nth-child(1) { transition-delay: 0.1s; }
 .grid > .fade-in:nth-child(2) { transition-delay: 0.2s; }
 .grid > .fade-in:nth-child(3) { transition-delay: 0.3s; }
 .grid > .fade-in:nth-child(4) { transition-delay: 0.4s; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .hero-grid { flex-direction: column-reverse; }
+  .navbar { flex-direction: column; height: auto; padding: 12px 0; }
+  .timeline-item { flex-direction: column; gap: 4px; }
+}
