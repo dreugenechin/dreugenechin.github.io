@@ -10,7 +10,7 @@
   --accent: #d97706; /* Amber/Bronze accent color for links */
   --border-radius: 12px;
   --font-body: 'Inter', sans-serif;
-  --font-heading: 'Cormorant Garamond', serif; /* Narrow, classy serif */
+  --font-heading: 'Marcellus', serif; /* Very thin, narrow, elegant Roman font */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,9 +22,12 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, .hero-name, .left-side b {
+/* Apply classy narrow serif only to major titles */
+h1, h2, .hero-name, .left-side b {
   font-family: var(--font-heading);
   color: var(--text-heading);
+  font-weight: 400; /* This removes the default browser boldness! */
+  letter-spacing: 0.03em; /* Adds a tiny bit of breathing room for elegance */
 }
 
 a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
