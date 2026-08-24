@@ -34,3 +34,28 @@ document.querySelectorAll('a[href="#top"]').forEach(a => {
     document.documentElement.scrollTo({top: 0, behavior: 'smooth'});
   });
 });
+
+// --- SCROLL REVEAL (LAZY LOADING) ANIMATIONS ---
+document.addEventListener("DOMContentLoaded", () => {
+  // Set up the Intersection Observer
+  const observerOptions = {
+    root: null, // use the viewport
+    rootMargin: "0px",
+    threshold: 0.15 // trigger when 15% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the visible class to trigger the CSS animation
+        entry.target.classList.add("is-visible");
+        // Stop observing the element so it doesn't fade out when scrolling up
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, observerOptions);
+
+  // Find all elements with the 'fade-in' class and observe them
+  const fadeElements = document.querySelectorAll(".fade-in");
+  fadeElements.forEach(el => observer.observe(el));
+});
